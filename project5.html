@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Tarot Card Reader | Malaz Elbadri</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Malaz Elbadri</div>
+        <div class="nav-links">
+            <a href="index.html#home" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="index.html#projects" class="nav-link">Projects</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Project Content -->
+    <section class="project-details">
+        <div class="project-header">
+            <h1>Digital Tarot Card Reader</h1>
+            <div class="project-meta">
+                <span class="project-category">Digital Art / Animation</span>
+                <span class="project-date">2024</span>
+            </div>
+        </div>
+        
+        <div class="project-hero">
+            <img src="images/tarotfront.jpg" alt="Kindled Flames Project" class="full-width-img">
+        </div>
+        
+        <div class="project-content">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>The Digital Tarot Card Reader is an interactive web-based experience that allows users to draw a tarot card and receive a personalized reading. Built using HTML, CSS, and JavaScript, the project features custom visual design and an animated card-draw sequence. It combines aesthetic storytelling with real-time data pulled from an external API, offering users a moment of reflection and insight through digital divination.
+
+                </p>
+                
+                <h2>The Challenge</h2>
+                <p>The main challenge was integrating multiple elements, visual design, animation, and external data, into a seamless user experience. This was my first time working with an API, which meant learning how to fetch, parse, and display dynamic content. I also wanted to maintain a strong visual identity throughout, so creating a cohesive look between the Photoshop-designed cover page and the web interface was key.
+                </p>
+                
+                <h2>Process & Development</h2>
+                <p>The project began with the visual concept. I used Photoshop to design the landing page, drawing inspiration from traditional tarot aesthetics while giving it a modern digital twist. Once the visuals were in place, I built the structure of the site using HTML and CSS, focusing on layout, color, and accessibility.
+
+                    Next, I added interactive functionality in JavaScript. I created an animated card draw interaction that mimics the suspense and ritual of a real tarot reading. When a card is selected, the app fetches data from a tarot card API, displaying the card’s name, image, and meaning dynamically. This required learning how to work with asynchronous JavaScript and JSON data formats.</p>
+            </div>
+            
+            <div class="project-gallery">
+                <h2>Project Gallery</h2>
+                <div class="gallery-grid">
+                  <img src="images/tarotfront.jpg" style="width: 500px; max-width: 100%;" alt="Front Page">
+                  <img src="images/Tarotpick.jpg" style="width: 500px; max-width: 100%;" alt="Pick your cards">
+                  <img src="images/cards.jpg" style="width: 500px; max-width: 100%;" alt="Your selected cards">
+                </div>
+              </div>
+              
+            
+            <div class="project-video">
+                <h2>Check out the site!</h2>
+                <div class="video-container">
+                    <a href="https://malazeny.github.io/Tarot-Website/" target="_blank">
+                        <img src="images/tarotfront.jpg" alt="Description of image" />
+                      </a>
+                </div>
+            </div>
+            
+            <div class="project-conclusion">
+                <h2>Outcome & Reflection</h2>
+                <p>The final result is a smooth, visually engaging tarot experience that feels both magical and tech-forward. This was my first project using an external API, and it taught me the foundations of working with real-time data, something I now feel much more confident doing. It also deepened my understanding of how animation and interaction can heighten user engagement and narrative flow.
+
+                    Looking back, this project marked a turning point in my coding journey. It pushed me to think holistically: not just about how something looks, but how it behaves, responds, and communicates meaning. I'm excited to keep exploring how code and mysticism can intersect in playful, thought-provoking ways.</p>
+                
+                <div class="project-tech">
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Photoshop</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="project-navigation">
+                <a href="project4.html" class="btn previous-project">← Previous Project</a>
+                <a href="index.html#projects" class="btn">All Projects</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+          <div class="footer-logo">Malaz Elbadri</div>
+          <div class="social-links">
+              <a href="https://github.com/malazeny" class="social-link" target="_blank">
+                  <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/malazelbadri/" class = "social-link" target="_blank">
+                  <i class= "fab fa-linkedin-in" ></i>
+              </a>
+              </a>
+              <a href="https://www.instagram.com/mal4z/" class="social-link" target="_blank">
+                  <i class="fab fa-instagram"></i>
+              </a>
+          </div>
+      </div>
+      <div class="copyright">
+          © 2025 Malaz. All rights reserved.
+      </div>
+  </footer>
+    
+    <script>
+        // Animation for page elements
+        gsap.from(".project-header", {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            ease: "power3.out"
+        });
+        
+        gsap.from(".project-hero img", {
+            opacity: 0,
+            scale: 1.05,
+            duration: 1.2,
+            delay: 0.3,
+            ease: "power3.out"
+        });
+        
+        gsap.from(".project-content", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.5,
+            ease: "power3.out"
+        });
+        
+        // Scroll animations
+        gsap.registerPlugin(ScrollTrigger);
+        
+        gsap.utils.toArray(".project-gallery img").forEach((img, i) => {
+            gsap.from(img, {
+                scrollTrigger: {
+                    trigger: img,
+                    start: "top bottom",
+                    end: "center center",
+                    scrub: true
+                },
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                delay: i * 0.2
+            });
+        });
+    </script>
+</body>
+</html>

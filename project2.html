@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P5.js Game | Malaz Elbadri</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Malaz Elbadri</div>
+        <div class="nav-links">
+            <a href="index.html#home" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="index.html#projects" class="nav-link">Projects</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Project Content -->
+    <section class="project-details">
+        <div class="project-header">
+            <h1>Interactive P5.js Game</h1>
+            <div class="project-meta">
+                <span class="project-category">Creative Coding / Game Design</span>
+                <span class="project-date">2024</span>
+            </div>
+        </div>
+        
+        <div class="project-hero">
+            <img src="images/StarterP5.JsGame.jpg" alt="P5.js Game Project" class="full-width-img">
+        </div>
+        
+        <div class="project-content">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>This interactive game was developed using P5.js, a JavaScript library designed to make creative coding more accessible. Inspired by Crossy Road, the game challenges players to navigate through three increasingly difficult levels filled with moving obstacles. As a fusion of art and logic, this project allowed me to explore the intersection of gameplay mechanics, visual storytelling, and user interaction in a browser-based environment.
+                </p>
+                
+                <h2>The Challenge</h2>
+                <p>As my first major coding project, the biggest challenge was managing a large and complex codebase—spanning over 1,000 lines. I had to carefully organize game logic, object interactions, and level transitions while ensuring the game remained responsive and fun. Creating three distinct levels with escalating difficulty required strategic planning and iteration to balance playability with challenge.
+                </p>
+                
+                <h2>Process & Development</h2>
+                <p>The development began with sketches of characters, environments, and basic mechanics modeled after Crossy Road. I implemented core gameplay features like character movement, vehicle and obstacle logic, collision detection, scoring, and level switching. Debugging and playtesting were critical, especially as I scaled the project to include multiple stages. Along the way, I learned how to structure my code for readability and efficiency, and how to use arrays, classes, and conditional logic to manage dynamic game behavior.</p>
+                
+                <div class="game-demo">
+                    <h3>Interactive Demo</h3>
+                    <div class="iframe-wrapper">
+                    <div class="iframe-container">
+                        <iframe src="p5index.html" frameborder="0" style="border: none" ></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-gallery">
+                <h2>Development Process</h2>
+                <div class="gallery-grid">
+                    <img src="images/startpage.jpg" alt="Game Design Sketches">
+                    <img src="images/secondpage.jpg" alt="Prototype Testing">
+                    <img src="images/thirdpage.jpg" alt="Visual Style Development">
+                    <img src="images/fourthpage.jpg" alt="Visual Style Development">
+                    <img src="images/winningpage.jpg" alt="Visual Style Development">
+                    <img src="images/losingpage.jpg" alt="Visual Style Development">
+                </div>
+            </div>
+            
+            <div class="project-conclusion">
+                <h2>Outcome & Reflection</h2>
+                <p>Completing this game was a major milestone in my creative coding journey. As my first large-scale programming project, it pushed me to think critically, troubleshoot independently, and stay persistent through bugs and unexpected behavior. Seeing the game come together, from a rough prototype to a fully playable experience, was incredibly rewarding.</p>
+                
+                <div class="project-tech">
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li>P5.js</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="project-navigation">
+                <a href="index.html#projects" class="btn">Back to All Projects</a>
+                <a href="project3.html" class="btn next-project">Next Project →</a>
+            </div>x
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+          <div class="footer-logo">Malaz Elbadri</div>
+          <div class="social-links">
+              <a href="https://github.com/malazeny" class="social-link" target="_blank">
+                  <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/malazelbadri/" class = "social-link" target="_blank">
+                  <i class= "fab fa-linkedin-in" ></i>
+              </a>
+              </a>
+              <a href="https://www.instagram.com/mal4z/" class="social-link" target="_blank">
+                  <i class="fab fa-instagram"></i>
+              </a>
+          </div>
+      </div>
+      <div class="copyright">
+          © 2025 Malaz. All rights reserved.
+      </div>
+  </footer>
+    
+    <script>
+        // Animation for page elements
+        gsap.from(".project-header", {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            ease: "power3.out"
+        });
+        
+        gsap.from(".project-hero img", {
+            opacity: 0,
+            scale: 1.05,
+            duration: 1.2,
+            delay: 0.3,
+            ease: "power3.out"
+        });
+        
+        gsap.from(".project-content", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.5,
+            ease: "power3.out"
+        });
+        
+        // Scroll animations
+        gsap.registerPlugin(ScrollTrigger);
+        
+        gsap.utils.toArray(".project-gallery img").forEach((img, i) => {
+            gsap.from(img, {
+                scrollTrigger: {
+                    trigger: img,
+                    start: "top bottom",
+                    end: "center center",
+                    scrub: true
+                },
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                delay: i * 0.2
+            });
+        });
+    </script>
+
+</body>
+</html>

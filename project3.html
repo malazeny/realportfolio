@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kindled Flames | Malaz Elbadri</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Malaz Elbadri</div>
+        <div class="nav-links">
+            <a href="index.html#home" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="index.html#projects" class="nav-link">Projects</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Project Content -->
+    <section class="project-details">
+        <div class="project-header">
+            <h1>Kindled Flames</h1>
+            <div class="project-meta">
+                <span class="project-category">Physical Computing / Animation  </span>
+                <span class="project-date">2024</span>
+            </div>
+        </div>
+        
+        <div class="project-hero">
+            <img src="images/darklight.jpeg" alt="Kindled Flames Project" class="full-width-img">
+        </div>
+        
+        <div class="project-content">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>Kindled Flames is a digital art installation that explores the nature of light through an immersive and interactive animation. Built using Arduino and LED technology, the project combines physical computing with hand-crafted materials to create a captivating visual experience. The installation reflects themes of transformation and energy, brought to life through dynamic light behavior.</p>
+                
+                <h2>The Challenge</h2>
+                <p>The main challenge was constructing a responsive light installation using only found and recycled materials. Every element, wood, glass bottles, wiring, had to be sourced sustainably, and carefully assembled to support the technical components. We also had to design and solder multiple LED strips and program complex lighting animations that could bring the piece to life in a compelling and coherent way.</p>
+                
+                <h2>Process & Development</h2>
+                <p>The project began with material exploration, collecting wood and glass bottles that would form the physical structure of the piece. We designed the layout to frame and reflect the lighting in interesting ways, using layering, texture, and diffusion.
+
+                    From there, we moved into the electronics phase: soldering long runs of addressable LED strips and integrating them with an Arduino microcontroller. The code was developed to simulate flame-like motion, experimenting with timing, brightness curves, and color transitions. Each component, hardware and software, was iteratively tested and refined to achieve both technical reliability and aesthetic harmony.</p>
+            </div>
+            
+            <div class="project-gallery">
+                <h2>Project Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="images/kindledlightsketch.jpg" alt="Kindled Flames Concept Art">
+                    <img src="images/picture2.jpg" alt="Animation Process">
+                    <img src="images/picture3.jpg" alt="Final Installation">
+                    <img src="images/inside.jpg" alt="Final Installation">
+                    <img src="images/StarterKindledFlames.jpg" alt="User Interaction">
+                    <img src="images/dark.jpg" alt="Final Installation">
+                </div>
+            </div>
+            
+            <div class="project-video">
+                <h2>Animation Demo</h2>
+                <div class="video-container">
+                  <video controls muted src="flamevideo.mp4" type="video/mp4"></video>
+                </div>
+            </div>
+            
+            <div class="project-conclusion">
+                <h2>Outcome & Reflection</h2>
+                <p>Kindled Flames came together as a deeply collaborative and hands-on project. Building with entirely repurposed materials added a meaningful constraint that encouraged creativity and resourcefulness. Technically, it pushed our skills in soldering, circuitry, and Arduino programming, especially in developing real, time animations that respond smoothly and consistently.
+
+                    The final result was a glowing, atmospheric sculpture that invited viewers to pause and reflect. Through this project, we learned how physical form and digital light can work together to evoke emotion. It solidified our interest in interactive art and illuminated new possibilities for working at the intersection of technology, sustainability, and design.</p>
+                
+                <div class="project-tech">
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li>Arduino</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="project-navigation">
+                <a href="project2.html" class="btn previous-project">← Previous Project</a>
+                <a href="index.html#projects" class="btn">All Projects</a>
+                <a href="project4.html" class="btn next-project">Next Project →</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+          <div class="footer-logo">Malaz Elbadri</div>
+          <div class="social-links">
+              <a href="https://github.com/malazeny" class="social-link" target="_blank">
+                  <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/malazelbadri/" class = "social-link" target="_blank">
+                  <i class= "fab fa-linkedin-in" ></i>
+              </a>
+              </a>
+              <a href="https://www.instagram.com/mal4z/" class="social-link" target="_blank">
+                  <i class="fab fa-instagram"></i>
+              </a>
+          </div>
+      </div>
+      <div class="copyright">
+          © 2025 Malaz. All rights reserved.
+      </div>
+  </footer>
+    
+    <script>
+        // Animation for page elements
+        gsap.from(".project-header", {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            ease: "power3.out"
+        });
+        
+        gsap.from(".project-hero img", {
+            opacity: 0,
+            scale: 1.05,
+            duration: 1.2,
+            delay: 0.3,
+            ease: "power3.out"
+        });
+        
+        gsap.from(".project-content", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.5,
+            ease: "power3.out"
+        });
+        
+        // Scroll animations
+        gsap.registerPlugin(ScrollTrigger);
+        
+        gsap.utils.toArray(".project-gallery img").forEach((img, i) => {
+            gsap.from(img, {
+                scrollTrigger: {
+                    trigger: img,
+                    start: "top bottom",
+                    end: "center center",
+                    scrub: true
+                },
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                delay: i * 0.2
+            });
+        });
+    </script>
+</body>
+</html>
