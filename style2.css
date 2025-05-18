@@ -4,11 +4,6 @@
   src: url("texts/Super Golden.ttf");
 }
 
-@font-face {
-  font-family: "GameBubble";
-  src: url("texts/Game Bubble.otf");
-}
-
 /* ===== ROOT VARIABLES ===== */
 :root {
   --primary: #2d3748;
